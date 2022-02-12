@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index60</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/**В VSCode напишите сценарий вывода произведения 2 чисел с использованием шаблонных строк. Измените код так, 
+чтобы пользователь мог с клавиатуры вводить значения первого и второго чисел. Сохраните полученный результат под 
+именем index62.html */
+    let x = parseInt(prompt("Введите первый множитель x", " только число не ноль").trim());
+    let y = parseInt(prompt("Введите второй множитель y", " только число не ноль").trim());
+    if (isNaN(x) || x === ''|| x > 10000|| x == 0 || isNaN(y) || y === ''|| y > 10000|| y == 0) {
+        alert("Это не число или ограничение < 1000 или ноль, введите числа заново");
+        document.getElementsByName("alert").reload(window.location.reload());
+      }
+    else{
+      const multi = (x, y) => x * y;
+      let string = `The multiplying of ${x} and ${y} is ${multi(x, y)}`;
+      window.alert(string);
+    }
+		</script>
+	</body>
+</html>

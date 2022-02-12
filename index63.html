@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index60</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/**Наберите в VSCode код скрипта, в котором Вам нужно сделать функцию, которая генерирует строку доступа OAuth и 
+создает динамический URL. Измените сценарий так, чтобы заказчик в консоли мог вводить clientld для аутентификации на 
+сайте. В случае, если он не ввел никакого значения и нажал просто ОК в консоли должен сформироваться динамический 
+URL с вашим clientld. Сохраните полученный результат под именем index63.html*/
+
+    function createOAuthString(host, clientID, scope) {
+      return `${host}/login/oauth/authorize?client_id=${clientID}&scope=${scope}`
+    }
+    function  setID() {
+    let clientID = prompt('Введите clientID', 'fufaev');
+      if (clientID.trim() == '')
+        return `ksnmandriki`;
+      else
+        return clientID;
+    }
+    document.write(`<a href="${createOAuthString('https://github.com',setID(),'repo,user')}">Это динамический URL нажмите чтоб перейти</a> `);
+		</script>
+	</body>
+</html>

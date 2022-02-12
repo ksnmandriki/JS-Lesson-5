@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index60</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/**Допишите в VSCode в предыдущий пример код скрипта, в котором Вам нужно реализовать процесс создания функции- 
+конструктора. Измените вывод данных по объектам, добавьте недостающие актуальные данные (пользуйтесь поиском в 
+сети Интернет) и используя шаблонные строки, сделайте красивый вывод информации. Сохраните полученный результат 
+под именем index65.html: */
+
+function Smart(model,year,price, memory, display, protect)
+{
+  this.model = model;
+  this.year = year;
+  this.price = price;
+  this.memory = memory;
+  this.display = display;
+  this.protect = protect;
+  
+  this.show = function()
+  {
+    document.write(`Модель - ${this.model}<br>`);
+    document.write(`Дата выхода на рынок - ${this.year}<br>`);
+    document.write(`Цена - ${this.price}<br>`);
+    document.write(`Встроенная память - ${this.memory}<br>`);
+    document.write(`Размер экрана - ${this.display}<br>`);
+    document.write(`Пыле- и влагозащита - ${this.protect}<br><br>`);
+  }
+}
+    let smart = new Smart("Samsung Galaxy S22 Ultra ","2022","1210$","1T","5'","IP53"); 
+    smart.show();
+    let smart2 = new Smart("ASUS ROG Phone 5s ZS676KS ","2021","1167$","1T","5.3'","IP53"); 
+    smart2.show() ;
+    let smart3 = new Smart("OnePlus 10 Pro","2022" , "1167","1T","5'","IP68") ;
+    smart3.show();
+		</script>
+	</body>
+</html>
