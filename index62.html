@@ -13,8 +13,8 @@
 именем index62.html */
     let x = parseInt(prompt("Введите первый множитель x", " только число не ноль").trim());
     let y = parseInt(prompt("Введите второй множитель y", " только число не ноль").trim());
-    if (isNaN(x) || x === ''|| x > 10000|| x == 0 || isNaN(y) || y === ''|| y > 10000|| y == 0) {
-        alert("Это не число или ограничение < 1000 или ноль, введите числа заново");
+    if (isNaN(x) || x === ''|| x > 10000|| isNaN(y) || y === ''|| y > 10000) {
+        alert("Это не число или ограничение < 1000  введите числа заново");
         document.getElementsByName("alert").reload(window.location.reload());
       }
     else{
